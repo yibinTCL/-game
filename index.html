@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>井字棋游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>井字棋游戏</h1>
+        <div class="mode-select">
+            <button id="pvp">玩家对战</button>
+            <button id="ai">人机对战</button>
+            <select id="aiLevel" style="display:none;margin-left:8px;">
+                <option value="easy">简单</option>
+                <option value="medium">中等</option>
+                <option value="hard">困难</option>
+            </select>
+                <select id="firstPlayer" style="display:none;margin-left:8px;">
+                    <option value="player">玩家先手</option>
+                    <option value="ai">AI先手</option>
+                </select>
+        </div>
+        <div id="game">
+            <div id="board" class="board"></div>
+            <div id="status" class="status"></div>
+            <button id="reset">重置游戏</button>
+        </div>
+    </div>
+    <audio id="moveSound" src="move.mp3" preload="auto"></audio>
+    <audio id="winSound" src="win.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

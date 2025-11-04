@@ -1,0 +1,107 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    padding: 24px;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 16px;
+    color: #3a7bd5;
+}
+.mode-select {
+    margin-bottom: 16px;
+}
+.mode-select button {
+    margin: 0 8px;
+    padding: 8px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #3a7bd5;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.mode-select button.active {
+    background: #00d2ff;
+    color: #fff;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    margin: 0 auto 16px auto;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+}
+.cell {
+    background: #f0f4f8;
+    border-radius: 8px;
+    font-size: 48px;
+    color: #3a7bd5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    min-height: 80px;
+    min-width: 80px;
+    user-select: none;
+}
+.cell.x {
+    color: #3a7bd5;
+    animation: pop 0.2s;
+}
+.cell.o {
+    color: #00d2ff;
+    animation: pop 0.2s;
+}
+@keyframes pop {
+    0% { transform: scale(0.7); }
+    100% { transform: scale(1); }
+}
+.status {
+    font-size: 18px;
+    margin-bottom: 12px;
+    min-height: 24px;
+    color: #333;
+}
+#reset {
+    padding: 8px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #00d2ff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#reset:hover {
+    background: #3a7bd5;
+}
+@media (max-width: 500px) {
+    .container {
+        max-width: 98vw;
+        padding: 8vw 2vw;
+    }
+    .board {
+        max-width: 90vw;
+        min-width: 90vw;
+    }
+    .cell {
+        min-height: 18vw;
+        min-width: 18vw;
+        font-size: 10vw;
+    }
+}
