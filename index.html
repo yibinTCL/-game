@@ -30,6 +30,12 @@
     </div>
     <audio id="moveSound" src="move.mp3" preload="auto"></audio>
     <audio id="winSound" src="win.mp3" preload="auto"></audio>
-    <script src="script.js"></script>
+    <!-- 模块化脚本加载顺序：常量 -> 音频 -> AI -> 游戏核心 -> UI -> 主入口 -->
+    <script src="js/constants.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/ai.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
